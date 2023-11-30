@@ -3,7 +3,7 @@
 :root {
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
-    --text-primary: red;
+    --text-primary: #5d5e5e;
     --text-secondary: #B0926A;
     --bg-primary: #F4DFC8;
     --bg-secondary: #000000;
