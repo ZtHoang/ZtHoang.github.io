@@ -3,9 +3,9 @@
 :root {
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
-    --text-primary: #5d5e5e;
+    --text-primary: red;
     --text-secondary: #B0926A;
-    --bg-primary: blue;
+    --bg-primary: #F4DFC8;
     --bg-secondary: #000000;
     --bg-button: #F4DFC8;
     --search-bar: #FAF6F0;
