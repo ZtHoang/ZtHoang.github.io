@@ -43,7 +43,6 @@ header {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.45);
-    margin-bottom: 100px;
 }
 
 header .logo a {
@@ -58,7 +57,7 @@ header .logo a {
 }
 
 body {
-    padding-top: 100px;
+    padding-top: 38px; 
     background-color: var(--bg-primary);
 }
 
@@ -131,36 +130,77 @@ main {
     padding-top: 50px;
 }
 
-.hero {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
+.Home_hero {
+    background-image: url(img/hero-img.jpg);
+    margin-bottom: 60px;
+    padding-top: 80px;
 }
 
-.hero-content {
-    display: flex;
-    justify-content: space-between;
-}
-
-.left-hero {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.right-hero {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.heroImg {
+.column_container {
+    width: 1230px;
     max-width: 100%;
-    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    display: block;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+    margin-left: -16px;
+    margin-right: -16px;
+}
+
+.left_content {
+    flex: 1;
+    margin-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.SuperHeading {
+    color: #ffffff;
+    margin-top: 0;
+    font-size: 25px;
+    /* Spacing */
+    letter-spacing: 3px;
+    font-weight: 800;
+}
+
+.middle_content {
+    color: #5f5f5f;
+    flex: 1;
+    margin-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+/* A small box for direct to other tag in a website and is class is right_content */
+.right_content {
+    max-width: 33.33%;
+    flex: 33.33%;
+}
+
+.nav_box {
+    color: #5f5f5f;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    /* box shadow */
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.45);
 }
 
 .btn {
