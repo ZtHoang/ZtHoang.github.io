@@ -5,7 +5,7 @@
     font-family: 'Poppins', sans-serif;
     --text-primary: #5d5e5e;
     --text-secondary: #B0926A;
-    --bg-primary: #F4DFC8;
+    --bg-primary: #ffffff;
     --bg-secondary: #000000;
     --bg-button: #F4DFC8;
     --search-bar: #FAF6F0;
@@ -133,7 +133,7 @@ main {
 .Home_hero {
     background-image: url(img/hero-img.jpg);
     background-color: #f5f5f5; /* Fallback color */
-    margin-bottom: 60px;
+    margin-bottom: 5px;
     padding-top: 80px;
     height: 75vh;
 }
