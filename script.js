@@ -46,3 +46,85 @@ loginLink.addEventListener('click', function(event) {
   registerForm.style.display = 'none';
   loginForm.style.display = 'block';
 });
+
+//---------------------------------------------------------------------------------------------
+
+var dropdownContent = document.createElement('div');
+dropdownContent.className = 'dropdown-content';
+
+var brands = ['Logitech', 'Corsair', 'DareU', 'Razer', 'SteelSeries'];
+var links = ['logitech_kb.html', 'corsair_kb.html', 'DareU_kb.html', 'razer_kb.html', 'steelseries_kb.html'];
+
+for (var i = 0; i < brands.length; i++) {
+    var link = document.createElement('a');
+    link.href = links[i];
+    link.innerText = brands[i];
+    dropdownContent.appendChild(link);
+}
+
+var dropdown = document.querySelector('.dropdown');
+dropdown.appendChild(dropdownContent);
+
+//---------------------------------------------------------------------------------------------
+
+// JavaScript code to auto-generate product cards
+window.onload = function() {
+    var products = [
+        {name: "Corsair K70 Pro", price: 3490000, img: "img/Keyboard/Crs_kb2.png"},
+        {name: "Product B", price: 60, img: "path/to/image2.jpg"},
+        {name: "Product C", price: 70, img: "path/to/image3.jpg"},
+        {name: "Product D", price: 80, img: "path/to/image4.jpg"},
+        {name: "Product E", price: 90, img: "path/to/image5.jpg"},
+        {name: "Product F", price: 100, img: "path/to/image6.jpg"}
+    ];
+
+    var container = document.querySelector('.row1'); 
+
+    for (var i = 0; i < products.length; i++) {
+        var column = document.createElement('div');
+        column.className = 'column';
+
+        var card = document.createElement('div');
+        card.className = 'card';
+
+        var img = document.createElement('img');
+        img.src = products[i].img;
+
+        var description = document.createElement('div');
+        description.className = 'description';
+
+        var prod_Name = document.createElement('div');
+        prod_Name.className = 'prod_Name';
+        prod_Name.innerHTML = '<strong>' + products[i].name + '<strong>';
+
+        var prod_Price = document.createElement('div');
+        prod_Price.className = 'prod_Price';
+        prod_Price.innerText = parseInt(products[i].price).toLocaleString('de-DE') + "₫";
+
+        var addToCart = document.createElement('button');
+        addToCart.innerText = 'Add to Cart';
+        addToCart.className = 'addToCart';
+
+        description.appendChild(prod_Name);
+        description.appendChild(prod_Price);
+        description.appendChild(addToCart);
+        card.appendChild(img);
+        card.appendChild(description);
+        column.appendChild(card);
+        container.appendChild(column);
+    }
+}
+
+//---------------------------------------------------------------------------------------------
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+//---------------------------------------------------------------------------------------------
