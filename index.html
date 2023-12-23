@@ -10,23 +10,30 @@
 
 <body>
   <header>
-    <h2 class="logo"><a href="index.html">Keybolic</a></h2>
-    <input type="text" class="search-bar" placeholder="Search">
-    <nav class="navigation">
-      <div class="dropdown">
-        <a class="dropbtn" href="keyboard-main.html" onclick="window.open('keyboard-main.html', '_self');">Keyboard &nbsp; <i class="fa-solid fa-arrow-down"></i></a>
-        <div class="dropdown-content">
-          <!-- drop down menu are here -->
+    <div class="nav_container">
+      <h2 class="logo"><a href="index.html">Keybolic</a></h2>
+      <div class="nav_2">
+        <div class="nav_2_container">
+          <nav class="navigation">
+            <div class="dropdown">
+              <a class="dropbtn" href="keyboard-main.html" onclick="window.open('keyboard-main.html', '_self');">Keyboard &nbsp; <i class="fa-solid fa-arrow-down"></i></a>
+              <div class="dropdown-content">
+                <!-- drop down menu are here -->
+              </div>
+            </div>
+            <a href="Keycap-main.html" onclick="window.open('Keycap-main.html', '_self');">Keycaps</a>
+            <a href="Switches-main.html" onclick="window.open('Switches-main.html', '_self');">Switches</a>
+            <a href="Accessories-main.html" onclick="window.open('Accessories-main.html', '_self');">Accessories</a>
+          </nav>
+          <div class="header_tools">
+            <button class="lgin_ic"><i class="fa-regular fa-user"></i></button>
+            <button class="search_ic"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
         </div>
       </div>
-      <a href="Keycap-main.html" onclick="window.open('Keycap-main.html', '_self');">Keycaps</a>
-      <a href="Switches-main.html" onclick="window.open('Switches-main.html', '_self');">Switches</a>
-      <a href="Accessories-main.html" onclick="window.open('Accessories-main.html', '_self');">Accessories</a>
-    </nav>
-
-    <div class="header_tools">
-      <button class="lgin_ic"><i class="fa-regular fa-user"></i></button>
-      <button class="search_ic"><i class="fa-solid fa-magnifying-glass"></i></button>
+      <div class=""  id="searchBar" style="display: none;">
+        <input type="text" id="searchInput" placeholder="Search">
+      </div>
     </div>
 
     <div class="login_container">
@@ -46,7 +53,7 @@
 
         <div class="log_reg">
           <p class="log_text">Don't have an account?</p> 
-          <a class="log_link" target="_blank" href="register.html">Register</a>
+          <a class="log_link" target="_blank" href="Kbl_Register.html">Register</a>
         </div>
       </form>
     </div>
