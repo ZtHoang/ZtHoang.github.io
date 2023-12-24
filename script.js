@@ -5,8 +5,15 @@ const registerLink = document.querySelector('.log_reg .log_link');
 const emailInput = document.querySelector('#email');
 const passwordInput = document.querySelector('#password');
 
-loginButton.addEventListener('click', () => {
+loginButton.addEventListener('click', (event) => {
+    event.stopPropagation();
     loginContainer.classList.toggle('show');
+});
+
+document.addEventListener('click', (event) => {
+    if (!loginContainer.contains(event.target) && !loginButton.contains(event.target)) {
+        loginContainer.classList.remove('show');
+    }
 });
 
 btnLogin.addEventListener('click', (event) => {
@@ -135,11 +142,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 //---------------------------------------------------------------------------------------------
 
-document.querySelector('.search_ic').addEventListener('click', function() {
-    var searchBar = document.getElementById('searchBar');
-    if (searchBar.style.display === 'none') {
-      searchBar.style.display = 'block';
-    } else {
-      searchBar.style.display = 'none';
-    }
-  });
+document.querySelector('.search_ic').addEventListener('click', function(event) {
+  event.stopPropagation(); // Prevent this click from triggering the document's click event
+  var searchBar = document.getElementById('searchBar');
+  searchBar.classList.toggle('show');
+});
+
+document.addEventListener('click', function() {
+  var searchBar = document.getElementById('searchBar');
+  if (searchBar.classList.contains('show')) {
+    searchBar.classList.remove('show');
+  }
+});
+
+//---------------------------------------------------------------------------------------------
