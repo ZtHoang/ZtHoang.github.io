@@ -512,7 +512,7 @@ main {
   display: flex;
   direction: ltr;
   overflow-x: auto;
-  white-space: nowrap;
+  white-space: wrap;
   margin-bottom: 20px;
 }
 
@@ -693,13 +693,13 @@ main {
 
 /*-------------------------------------------------------------------------------------------------*/
 
-#searchBar {
+.searchBar {
   display: none;
   animation: slideFadeOut 0.5s ease-out forwards;
   transition: width 0.2s ease 0s, opacity 0.5s linear, transform 0.5s;
   box-shadow: rgba(0, 0, 0, 0.16) 4px 4px 14px 0px;
   background: white;
-  padding: 1.5rem;
+  padding: 0.5em;
   position: absolute;
   right: 200px;
   top: 0px;
@@ -708,14 +708,49 @@ main {
   z-index: 9999;
 }
 
-#searchBar.show {
+.searchBar.show {
   display: block;
   animation: slideFadeIn 0.2s ease-out forwards;
 }
 
-#searchInput {
+.searchInput {
   width: 100%;
   border: none;
-  border-radius: 5px;
   font-size: 1em;
+  height: 2em;
+}
+
+.searchInput:focus {
+  outline: none;
+}
+
+/*-------------------------------------------------------------------------------------------------*/
+.Acess_grid_left {
+  display: grid;
+  grid-template-rows: auto;
+  gap: 0 300px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 16px;
+  justify-items: end;
+}
+
+.Acess_1 {
+  display: flex; /* Add this */
+  justify-content: center; /* Add this */
+  align-items: center; /* Add this */
+  width: 300px;
+  border: 1px solid #000;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #000000;
 }

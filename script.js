@@ -1,19 +1,24 @@
 const loginButton = document.querySelector('.lgin_ic');
 const loginContainer = document.querySelector('.login_container');
+const searchIcon = document.querySelector('.search_ic');
+const searchBar = document.querySelector('.searchBar'); // Corrected this line
 const btnLogin = document.querySelector('.btn_log');
 const registerLink = document.querySelector('.log_reg .log_link');
 const emailInput = document.querySelector('#email');
 const passwordInput = document.querySelector('#password');
 
-loginButton.addEventListener('click', (event) => {
-    event.stopPropagation();
+loginButton.addEventListener('click', () => {
+    if (searchBar.classList.contains('show')) {
+        searchBar.classList.remove('show');
+    }
     loginContainer.classList.toggle('show');
 });
 
-document.addEventListener('click', (event) => {
-    if (!loginContainer.contains(event.target) && !loginButton.contains(event.target)) {
+searchIcon.addEventListener('click', () => {
+    if (loginContainer.classList.contains('show')) {
         loginContainer.classList.remove('show');
     }
+    searchBar.classList.toggle('show');
 });
 
 btnLogin.addEventListener('click', (event) => {
@@ -24,13 +29,10 @@ btnLogin.addEventListener('click', (event) => {
 
     console.log(`Email: ${email}`);
     console.log(`Password: ${password}`);
-
-    
 });
 
 registerLink.addEventListener('click', (event) => {
     event.preventDefault();
-    // Redirect to the registration page
     window.location.href = registerLink.href;
 });
 
@@ -141,18 +143,5 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 //---------------------------------------------------------------------------------------------
-
-document.querySelector('.search_ic').addEventListener('click', function(event) {
-  event.stopPropagation(); // Prevent this click from triggering the document's click event
-  var searchBar = document.getElementById('searchBar');
-  searchBar.classList.toggle('show');
-});
-
-document.addEventListener('click', function() {
-  var searchBar = document.getElementById('searchBar');
-  if (searchBar.classList.contains('show')) {
-    searchBar.classList.remove('show');
-  }
-});
 
 //---------------------------------------------------------------------------------------------
