@@ -725,6 +725,13 @@ main {
 }
 
 /*-------------------------------------------------------------------------------------------------*/
+
+.Accesories {
+  margin-top: 100px;
+  /* Shadow from the top */
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.45);
+}
+
 .Acess_grid_left {
   display: grid;
   grid-template-rows: auto;
@@ -739,9 +746,9 @@ main {
 }
 
 .Acess_1 {
-  display: flex; /* Add this */
-  justify-content: center; /* Add this */
-  align-items: center; /* Add this */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 300px;
   border: 1px solid #000;
   padding: 10px;
@@ -753,4 +760,9 @@ main {
   cursor: pointer;
   background-color: #ffffff;
   color: #000000;
+}
+
+.row-title1 {
+  margin-left: 50px;
+  height: 100%;
 }
