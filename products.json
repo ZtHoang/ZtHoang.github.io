@@ -1,0 +1,92 @@
+[
+    {
+        "name": "Corsair K70 Pro",
+        "price": 3490000,
+        "img": "img/Keyboard/Crs_kb2.png"
+    },
+    {
+        "name": "Corsair K55 RGB Pro Lite",
+        "price": 880000,
+        "img": "img/Keyboard/Crs_kb1.png"
+    },
+    {
+        "name": "Corsair K70 TKL RGB Champion Series",
+        "price": 3500000,
+        "img": "img/Keyboard/Crs_kb3.png"
+    },
+    {
+        "name": "AKKO 5075B Plus",
+        "price": 2400000,
+        "img": "img/Keyboard/ako_kb1.png"
+    },
+    {
+        "name": "AKKO 3108 v2 DS Horizon",
+        "price": 2400000,
+        "img": "img/Keyboard/ako_kb2.png"
+    },
+    {
+        "name": "AKKO 5108S Black Pink",
+        "price": 2400000,
+        "img": "img/Keyboard/ako_kb3.png"
+    },
+    {
+        "name": "Steelseries Apex PRO TKL",
+        "price": 4150000,
+        "img": "img/Keyboard/Ssr_kb1.png"
+    },
+    {
+        "name": "Steelseries Apex 7 TKL",
+        "price": 3500000,
+        "img": "img/Keyboard/Ssr_kb2.png"
+    },
+    {
+        "name": "Steelseries Apex 3",
+        "price": 2000000,
+        "img": "img/Keyboard/Ssr_kb3.png"
+    },
+    {
+        "name": "Logitech G915 TKL",
+        "price": 4500000,
+        "img": "img/Keyboard/Lgt_kb1.png"
+    },
+    {
+        "name": "Logitech G512 Carbon",
+        "price": 2500000,
+        "img": "img/Keyboard/Lgt_kb2.png"
+    },
+    {
+        "name": "Logitech G213 Prodigy",
+        "price": 1500000,
+        "img": "img/Keyboard/Lgt_kb3.png"
+    },
+    {
+        "name": "Razer BlackWidow V3 Pro",
+        "price": 5000000,
+        "img": "img/Keyboard/Rzr_kb1.png"
+    },
+    {
+        "name": "Razer BlackWidow V3 Tenkeyless",
+        "price": 3500000,
+        "img": "img/Keyboard/Rzr_kb2.png"
+    },
+    {
+        "name": "Razer BlackWidow V3",
+        "price": 3000000,
+        "img": "img/Keyboard/Rzr_kb3.png"
+    },
+    {
+        "name": "DareU EK820",
+        "price": 500000,
+        "img": "img/Keyboard/Dru_kb1.png"
+    },
+    {
+        "name": "DareU EK75 Pro",
+        "price": 600000,
+        "img": "img/Keyboard/Dru_kb2.png"
+    },
+    {
+        "name": "DareU EK815",
+        "price": 400000,
+        "img": "img/Keyboard/Dru_kb3.png"
+    }
+]

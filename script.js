@@ -6,19 +6,29 @@ const btnLogin = document.querySelector('.btn_log');
 const registerLink = document.querySelector('.log_reg .log_link');
 const emailInput = document.querySelector('#email');
 const passwordInput = document.querySelector('#password');
+const cartIcon = document.querySelector('.cart_ic'); // Replace '.cart_ic' with the actual class or id of your cart icon
+const cartContainer = document.querySelector('.cart_Container'); // Replace '.cart_container' with the actual class or id of your cart container
+
+function toggleShow(target, ...elements) {
+    elements.forEach(element => {
+        if (element.classList.contains('show')) {
+            element.classList.remove('show');
+        }
+    });
+    target.classList.toggle('show');
+    activeIcon.classList.toggle('active');
+}
 
 loginButton.addEventListener('click', () => {
-    if (searchBar.classList.contains('show')) {
-        searchBar.classList.remove('show');
-    }
-    loginContainer.classList.toggle('show');
+    toggleShow(loginContainer, searchBar, cartContainer);
 });
 
 searchIcon.addEventListener('click', () => {
-    if (loginContainer.classList.contains('show')) {
-        loginContainer.classList.remove('show');
-    }
-    searchBar.classList.toggle('show');
+    toggleShow(searchBar, loginContainer,   cartContainer);
+});
+
+cartIcon.addEventListener('click', () => {
+    toggleShow(cartContainer, loginContainer, searchBar);
 });
 
 btnLogin.addEventListener('click', (event) => {
@@ -57,77 +67,63 @@ dropdown.appendChild(dropdownContent);
 //---------------------------------------------------------------------------------------------
 
 window.onload = function() {
-    var products = [
-        {name: "Corsair K70 Pro", price: 3490000, img: "img/Keyboard/Crs_kb2.png"},
-        {name: "Corsair K55 RGB Pro Lite", price: 880000, img: "img/Keyboard/Crs_kb1.png"},
-        {name: "Corsair K70 TKL RGB Champion Series", price: 3500000, img: "img/Keyboard/Crs_kb3.png"},
-        {name: "AKKO 5075B Plus", price: 2400000, img: "img/Keyboard/ako_kb1.png"},
-        {name: "AKKO 3108 v2 DS Horizon", price: 2400000, img: "img/Keyboard/ako_kb2.png"},
-        {name: "AKKO 5108S Black Pink", price: 2400000, img: "img/Keyboard/ako_kb3.png"},
-        {name: "Steelseries Apex PRO TKL", price: 4150000, img: "img/Keyboard/Ssr_kb1.png"},
-        {name: "Steelseries Apex 7 TKL", price: 3500000, img: "img/Keyboard/Ssr_kb2.png"},
-        {name: "Steelseries Apex 3", price: 2000000, img: "img/Keyboard/Ssr_kb3.png"},
-        {name: "Logitech G915 TKL", price: 4500000, img: "img/Keyboard/Lgt_kb1.png"},
-        {name: "Logitech G512 Carbon", price: 2500000, img: "img/Keyboard/Lgt_kb2.png"},
-        {name: "Logitech G213 Prodigy", price: 1500000, img: "img/Keyboard/Lgt_kb3.png"},
-        {name: "Razer BlackWidow V3 Pro", price: 5000000, img: "img/Keyboard/Rzr_kb1.png"},
-        {name: "Razer BlackWidow V3 Tenkeyless", price: 3500000, img: "img/Keyboard/Rzr_kb2.png"},
-        {name: "Razer BlackWidow V3", price: 3000000, img: "img/Keyboard/Rzr_kb3.png"},
-        {name: "DareU EK820", price: 500000, img: "img/Keyboard/Dru_kb1.png"},
-        {name: "DareU EK75 Pro", price: 600000, img: "img/Keyboard/Dru_kb2.png"},
-        {name: "DareU EK815", price: 400000, img: "img/Keyboard/Dru_kb3.png"}
-    ];
+    fetch('products.json')
+        .then(response => response.json())
+        .then(products => {
+            var container = document.querySelector('.row1'); 
 
-    var container = document.querySelector('.row1'); 
+            for (var i = 0; i < 6; i++) {
+                let randomIndex = Math.floor(Math.random() * products.length);
+                let product = products[randomIndex];
 
-    for (var i = 0; i < 6; i++) {
-        var randomIndex = Math.floor(Math.random() * products.length);
-        var product = products[randomIndex];
+                var column = document.createElement('div');
+                column.className = 'column';
 
-        var column = document.createElement('div');
-        column.className = 'column';
+                var card = document.createElement('div');
+                card.className = 'card';
 
-        var card = document.createElement('div');
-        card.className = 'card';
+                var img = document.createElement('img');
+                img.src = product.img;
 
-        var img = document.createElement('img');
-        img.src = product.img;
+                var description = document.createElement('div');
+                description.className = 'description';
 
-        var description = document.createElement('div');
-        description.className = 'description';
+                var prod_Name = document.createElement('div');
+                prod_Name.className = 'prod_Name';
+                prod_Name.innerHTML = '<strong>' + product.name + '<strong>';
 
-        var prod_Name = document.createElement('div');
-        prod_Name.className = 'prod_Name';
-        prod_Name.innerHTML = '<strong>' + product.name + '<strong>';
+                var prod_Price = document.createElement('div');
+                prod_Price.className = 'prod_Price';
+                prod_Price.innerText = parseInt(product.price).toLocaleString('de-DE') + "₫";
 
-        var prod_Price = document.createElement('div');
-        prod_Price.className = 'prod_Price';
-        prod_Price.innerText = parseInt(product.price).toLocaleString('de-DE') + "₫";
+                
+                var addToCartButton = document.createElement('a');
+                addToCartButton.className = 'addToCart';
+                addToCartButton.addEventListener('click', function() {
+                    addToCart(product.name, product.price, product.img);
+                });
 
-        
-        var addToCart = document.createElement('a');
-        addToCart.className = 'addToCart';
+                var icon = document.createElement('i');
+                icon.className = 'fa-solid fa-cart-shopping';
 
-        var icon = document.createElement('i');
-        icon.className = 'fa-solid fa-cart-shopping';
+                // Append the icon to the addToCart element
+                addToCartButton.appendChild(icon);
 
-        // Append the icon to the addToCart element
-        addToCart.appendChild(icon);
+                // Create a text node and append it after the icon
+                var textNode = document.createTextNode(' Add to Cart');
+                addToCartButton.appendChild(textNode);
 
-        // Create a text node and append it after the icon
-        var textNode = document.createTextNode(' Add to Cart');
-        addToCart.appendChild(textNode);
+                description.appendChild(prod_Name);
+                description.appendChild(prod_Price);
+                description.appendChild(addToCartButton);
+                card.appendChild(img);
+                card.appendChild(description);
+                column.appendChild(card);
+                container.appendChild(column);
 
-        description.appendChild(prod_Name);
-        description.appendChild(prod_Price);
-        description.appendChild(addToCart);
-        card.appendChild(img);
-        card.appendChild(description);
-        column.appendChild(card);
-        container.appendChild(column);
-
-        products.splice(randomIndex, 1);
-    }
+                products.splice(randomIndex, 1);
+            }
+        });
 }
 
 //---------------------------------------------------------------------------------------------
@@ -143,5 +139,124 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 //---------------------------------------------------------------------------------------------
+
+var cart = [];
+
+// Function to add a product to the cart
+function addToCart(product, price, imgSrc) {
+    var existingProduct = cart.find(item => item.name === product);
+
+    if (existingProduct) {
+        existingProduct.quantity += 1;
+    } else {
+        cart.push({ name: product, price: price, img: imgSrc, quantity: 1 });
+
+        // Increase the cart count
+        var cartCount = document.querySelector('.cart_count');
+        cartCount.innerText = parseInt(cartCount.innerText) + 1;
+    }
+
+    updateCartDisplay();
+}
+
+document.querySelectorAll('.minus, .plus').forEach(element => {
+    element.addEventListener('mousedown', function(event) {
+        event.preventDefault();
+    });
+});
+
+function updateQuantity(product, delta) {
+    var existingProduct = cart.find(item => item.name === product);
+
+    if (existingProduct) {
+        existingProduct.quantity += delta;
+    
+        if (existingProduct.quantity <= 0) {
+            cart = cart.filter(item => item.name !== product);
+    
+            // Decrease the cart count
+            var cartCount = document.querySelector('.cart_count');
+            cartCount.innerText = parseInt(cartCount.innerText) - 1;
+    
+            // Update the cart display immediately
+            updateCartDisplay();
+        } else {
+            // Call updateCartDisplay only if the product is still in the cart
+            updateCartDisplay();
+        }
+    }
+}
+
+// Function to display the cart
+function updateCartDisplay() {
+    var cartContainer = document.querySelector('.cart_Items');
+    cartContainer.innerHTML = '';
+
+    cart.forEach(item => {
+        var cardItem = document.createElement('div');
+        cardItem.className = 'card_item';
+
+        var imageCard = document.createElement('div');
+        imageCard.className = 'image_card';
+
+        var img = document.createElement('img');
+        img.src = item.img;
+        imageCard.appendChild(img);
+
+        var itemInfo = document.createElement('div');
+        itemInfo.className = 'item_info';
+
+        var itemName = document.createElement('div');
+        itemName.className = 'item_name';
+        itemName.innerHTML = item.name;
+        itemInfo.appendChild(itemName);
+
+        var itemPrice = document.createElement('div');
+        itemPrice.className = 'item_price';
+        itemPrice.innerHTML = item.price.toLocaleString('de-DE') + '₫';
+        itemInfo.appendChild(itemPrice);
+
+        var itemQuantity = document.createElement('div');
+        itemQuantity.className = 'item_quantity';
+
+        var minus = document.createElement('button');
+        minus.className = 'minus';
+        minus.innerText = ' - ';
+        itemQuantity.appendChild(minus);
+
+        var quantity = document.createElement('span');
+        quantity.innerText = ' ' + item.quantity + ' ';
+        itemQuantity.appendChild(quantity);
+
+        var plus = document.createElement('button');
+        plus.className = 'plus';
+        plus.innerText = ' + ';
+        itemQuantity.appendChild(plus);
+
+        itemQuantity.addEventListener('click', function(event) {
+            if (event.target.className === 'minus') {
+                updateQuantity(item.name, -1);
+            } else if (event.target.className === 'plus') {
+                updateQuantity(item.name, 1);
+            }
+        });
+
+        itemInfo.appendChild(itemQuantity);
+        cardItem.appendChild(imageCard);
+        cardItem.appendChild(itemInfo);
+        cartContainer.appendChild(cardItem);
+    });
+}
+
+// Add event listener to the "Add to Cart" buttons
+document.querySelectorAll('.addToCart').forEach(button => {
+    button.addEventListener('click', function() {
+        var product = this.parentElement.querySelector('.prod_Name').innerText;
+        var price = this.parentElement.querySelector('.prod_Price').innerText;
+        var imgSrc = this.parentElement.parentElement.querySelector('img').src;
+
+        addToCart(product, price, imgSrc);
+    });
+});
 
 //---------------------------------------------------------------------------------------------

@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins&display=swap");
+
+:root {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  --text-primary: #5d5e5e;
+  --text-secondary: #b0926a;
+  --bg-primary: #ffffff;
+  --bg-secondary: #000000;
+  --bg-button: #f4dfc8;
+  --bg-button2: #f3b26d;
+  --bg-button3: #f29b3d;
+  --search-bar: #faf6f0;
+}
+
+header {
+  z-index: 1100;
+  background-color: #292928;
+  font-size: 16px;
+  position: fixed;
+  top: 0%;
+  bottom: auto;
+  left: 0%;
+  right: 0%;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.45);
+  display: flex;
+}
+
+.nav_container {
+  max-width: 1200px;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+.logo a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  transition: color 0.3s;
+  cursor: pointer;
+  align-self: center;
+  padding: 15px 0;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.navigation a {
+  position: relative;
+  font-size: 1.2em;
+  color: var(--text-primary);
+  font-weight: 700;
+  margin-left: 40px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navigation a:hover {
+  color: var(--text-secondary);
+  transition: color 0.3s;
+}
+
+.nav_2 {
+  max-height: 80px;
+  flex: 1;
+  justify-content: space-between;
+  margin-left: 32px;
+  transition: all 0.2s;
+  display: flex;
+  position: static;
+}
+
+.nav_2_container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  width: 850px;
+}
+
+.navigation {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.header_tools {
+  display: flex;
+  gap: 10px;
+}
+
+.header_tools button {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.header_tools button:hover {
+  color: #ddd;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.navigation .dropbtn {
+  font-size: 1.2em;
+  color: var(--text-primary);
+  font-weight: 700;
+  margin-left: 40px;
+  text-decoration: none;
+  transition: color 0.3s;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.navigation .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.navigation .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 100px;
+  left: 0;
+  top: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.navigation .dropdown-content a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  align-items: center;
+  text-align: center;
+  transition: color 0.3s;
+  margin: 0;
+}
+
+/* Change color of dropdown links on hover */
+.navigation .dropdown-content a:hover {
+  background-color: #f1f1f1;
+  color: var(--text-secondary);
+}
+
+.navigation .dropdown-content a::after {
+  content: none;
+}
+
+/* Show the dropdown menu on hover */
+.navigation .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the color of the dropdown button when the dropdown content is shown */
+.navigation .dropdown:hover .dropbtn {
+  color: var(--text-secondary);
+}
+
+/*-----------------------------------------------------------------------------------------------------------*/
+
+body {
+    padding-top: 38px;
+    background-color: var(--bg-primary);
+    width: 100vw; /* viewport width */
+    height: 100vh; /* viewport height */
+    overflow: auto; /* make overflow content scrollable */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  main {
+    padding-top: 28px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
