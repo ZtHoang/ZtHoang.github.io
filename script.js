@@ -245,7 +245,16 @@ function updateCartDisplay() {
         cardItem.appendChild(imageCard);
         cardItem.appendChild(itemInfo);
         cartContainer.appendChild(cardItem);
+        // Add a line every item except the last one
+        if (item !== cart[cart.length - 1]) {
+            var line = document.createElement('hr');
+            cartContainer.appendChild(line);
+        }
     });
+
+    var totalPriceElement = document.querySelector('#total_price');
+    var totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+    totalPriceElement.innerText = totalPrice.toLocaleString('de-DE') + '₫';
 }
 
 // Add event listener to the "Add to Cart" buttons

@@ -7,56 +7,79 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="nav_container">
-          <h2 class="logo"><a href="index.html">Keybolic</a></h2>
-          <div class="nav_2">
-            <div class="nav_2_container">
-              <nav class="navigation">
-                <div class="dropdown">
-                  <a class="dropbtn" href="keyboard-main.html" onclick="window.open('keyboard-main.html', '_self');">Keyboard &nbsp; <i class="fa-solid fa-arrow-down"></i></a>
-                  <div class="dropdown-content">
-                    <!-- drop down menu are here -->
-                  </div>
-                </div>
-                <a href="Keycap-main.html" onclick="window.open('Keycap-main.html', '_self');">Keycaps</a>
-                <a href="Switches-main.html" onclick="window.open('Switches-main.html', '_self');">Switches</a>
-                <a href="Accessories-main.html" onclick="window.open('Accessories-main.html', '_self');">Accessories</a>
-              </nav>
-              <div class="header_tools">
-                <button class="lgin_ic"><i class="fa-regular fa-user"></i></button>
-                <button class="search_ic"><i class="fa-solid fa-magnifying-glass"></i></button>
+  <header>
+    <div class="nav_container">
+      <h2 class="logo"><a href="index.html">Keybolic</a></h2>
+      <div class="nav_2">
+        <div class="nav_2_container">
+          <nav class="navigation">
+            <div class="dropdown">
+              <a class="dropbtn" href="keyboard-main.html" onclick="window.open('keyboard-main.html', '_self');">Keyboard &nbsp; <i class="fa-solid fa-arrow-down"></i></a>
+              <div class="dropdown-content">
+                <!-- drop down menu are here -->
               </div>
             </div>
+            <a href="Keycap-main.html" onclick="window.open('Keycap-main.html', '_self');">Keycaps</a>
+            <a href="Switches-main.html" onclick="window.open('Switches-main.html', '_self');">Switches</a>
+            <a href="Accessories-main.html" onclick="window.open('Accessories-main.html', '_self');">Accessories</a>
+          </nav>
+          <div class="header_tools">
+            <button class="lgin_ic"><i class="fa-regular fa-user"></i></button>
+            <button class="search_ic"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button class="cart_ic">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="cart_count">0</span>
+            </button>
           </div>
         </div>
-    
-        <div class="login_container">
-          <h2 class="heading_log">Welcome back!</h2>
-          <p class="p_log">Login to get started.</p>
-          <form>
-            <div class="log_gr">
-              <label class="txt_inp" for="email">Email</label>
-              <input type="email" id="email" class="log_plc" required>
-            </div>
-            <div class="log_gr">
-              <label class="txt_inp" for="password">Password</label>
-              <input type="password" id="password" class="log_plc" required>
-            </div>
-    
-            <button class="btn_log">Login</button>
-    
-            <div class="log_reg">
-              <p class="log_text">Don't have an account?</p> 
-              <a class="log_link" target="_blank" href="Kbl_Register.html">Register</a>
-            </div>
-          </form>
-        </div>
-    
-        <div class="searchBar">
-          <input class="searchInput" type="text" placeholder="Search...">
-        </div>
-    </header>
+      </div>
+    </div>
+    <!-- Login Form -->
+    <div class="login_container">
+      <h2 class="heading_log">Welcome back!</h2>
+      <p class="p_log">Login to get started.</p>
+      <form>
 
+        <div class="log_gr">
+          <label class="txt_inp" for="email">Email</label>
+          <input type="email" id="email" class="log_plc" required>
+        </div>
+
+        <div class="log_gr">
+          <label class="txt_inp" for="password">Password</label>
+          <input type="password" id="password" class="log_plc" required>
+        </div>
+
+        <button class="btn_log">Login</button>
+
+        <div class="log_reg">
+          <p class="log_text">Don't have an account?</p> 
+          <a class="log_link" target="_blank" href="Kbl_Register.html">Register</a>
+        </div>
+      </form>
+    </div>
+    <!-- Search Bar -->
+    <div class="searchBar">
+      <input class="searchInput" type="text" placeholder="Search...">
+    </div>
+    <!-- Cart Form -->
+    <div class="cart_Container">
+      <h2 class="heading_cart">Cart</h2>
+      <!-- This place is for product after click add to cart -->
+      <div class="cart_Items"></div>
+      <hr>
+      <div class="total_price">
+        <h3>Total: <span id="total_price">0</span></h3>
+      </div>
+      <button class="btn_cart">Check your cart</button>
+    </div>
+  </header>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="https://kit.fontawesome.com/0651734666.js" crossorigin="anonymous"></script>
+  <!-- 1 -->
+  <script src="script.js"></script>
 </body>
 </html>
