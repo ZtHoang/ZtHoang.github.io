@@ -899,7 +899,7 @@ main {
 }
 
 .Footer-content {
-  max-width: 1200px;
+  max-width: 100%;
   color: #ffffff;
   background-color: #292928;
   padding-left: 20px;
@@ -915,28 +915,58 @@ main {
 }
 
 .Footer-top {
+  width: 100%;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 50px;
 }
 
-.Footer_left_column,
-.Footer-section2 {
-  flex: 1;
+.Footer-logo {
+  margin-top: 50px;
+  font-size: 4em;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 5px;
 }
 
-.Footer-left-content1 h2,
-.Footer-section2 h2 {
-  margin-bottom: 15px;
+.Footer-left-coulumn {
+  width: 50%;
+  max-width: 50%;
+  text-align: left;
 }
 
-.Footer-left-content2,
-.Footer-section2 ul {
-  line-height: 1.6;
+.Footer-left-content2 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  font-size: 1.2em;
+}
+
+.Footer-icon {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.Footer-icon li {
+  margin-right: 20px; 
+  float: left;
+}
+
+.Footer-icon a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.Footer-icon i {
+  font-size: 26px; /* Adjust this value to increase or decrease the size of the icons */
+  
 }
 
 .Footer-left-content2-link {
   color: #fff;
-  text-decoration: none;
+  text-decoration: line;
+  /* change line color */
+  text-decoration-color: #ffffff;
 }
 
 .Footer-bottom {
