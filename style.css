@@ -549,6 +549,9 @@ main {
   margin-bottom: 5px;
 }
 
+/*-------------------------------------------------------------------------------------------------*/
+
+
 @media (min-width: 900px) {
   .column {
     flex: 0 0 calc(33.33% - 20px);
@@ -772,9 +775,17 @@ main {
 }
 
 .row-title1 {
-  margin-left: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100%;
-  text-align: center;
+  margin-bottom: 20px;
+}
+
+.row-title1 h2 {
+  font-size: 2em;
+  color: var(--text-primary);
+  font-weight: 700;
 }
 
 /*-------------------------------------------------------------------------------------------------*/
