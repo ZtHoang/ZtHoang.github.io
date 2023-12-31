@@ -66,7 +66,7 @@ dropdown.appendChild(dropdownContent);
 
 //---------------------------------------------------------------------------------------------
 
-window.onload = function() {
+window.addEventListener('load', function() {
     fetch('products.json')
         .then(response => response.json())
         .then(products => {
@@ -124,7 +124,7 @@ window.onload = function() {
                 products.splice(randomIndex, 1);
             }
         });
-}
+});
 
 //---------------------------------------------------------------------------------------------
 
