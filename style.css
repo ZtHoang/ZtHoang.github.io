@@ -510,6 +510,14 @@ main {
   margin-bottom: 20px;
 }
 
+.row-title2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-bottom: 20px;
+}
+
 .row-title1 h2 {
   font-size: 2em;
   color: #ffffff;
@@ -520,6 +528,79 @@ main {
   font-size: 2em;
   color: var(--text-primary);
   font-weight: 700;
+}
+
+.row-title2 h2 {
+  padding-top: 60px;
+  font-size: 4em;
+  color: #000000;
+  font-weight: 700;
+  /* upper-case */
+  text-transform: uppercase;
+}
+
+.email {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.email_form {
+  display: flex;;
+}
+
+.emailsignup {
+  width: 450px;
+  height: 40px;
+  border: 1.5px solid var(--bg-secondary);
+  border-radius: 4px;
+  font-weight: 600;
+  padding-left: 5px;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+  display: block;
+}
+
+.answer {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: var(--paragraph);
+  margin-top: 0;
+  padding-left: 0;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.btn_email {
+  height: 40px;
+  background-color: var(--bg-button3);
+  color: var(--bg-secondary);
+  border-radius: 4px;
+  margin-left: 10px;
+  padding: 8px 20px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+}
+
+.btn_email:hover {
+  background-color: var(--bg-button2);
+  color: var(--bg-secondary);
+  border-radius: 4px;
+  margin-left: 10px;
+  padding: 8px 20px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
 }
 
 .row1 {
@@ -959,6 +1040,12 @@ main {
   border-radius: 4px;
   transition: border-color 0.2s ease 0s;
   cursor: pointer;
+}
+
+/*-------------------------------------------------------------------------------------------------*/
+
+.row-title2 {
+
 }
 
 /*-------------------------------------------------------------------------------------------------*/
