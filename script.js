@@ -77,7 +77,7 @@ window.addEventListener('load', function() {
         .then(products => {
             var container = document.querySelector('.row1'); 
 
-            for (var i = 0; i < 6; i++) {
+            for (var i = 0; i < 8; i++) {
                 let randomIndex = Math.floor(Math.random() * products.length);
                 let product = products[randomIndex];
 
@@ -139,7 +139,7 @@ window.addEventListener('load', function() {
         .then(accessories => {
             var container = document.querySelector('.row2'); // Select the container for accessories
 
-            for (var i = 0; i < 6; i++) {
+            for (var i = 0; i < 8; i++) {
                 let randomIndex = Math.floor(Math.random() * accessories.length);
                 let accessory = accessories[randomIndex];
 

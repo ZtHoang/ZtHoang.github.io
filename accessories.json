@@ -1,42 +1,442 @@
 [
     {
-        "name": "Cherry MX2A Black Clear Top RGB | Pre-lube (35pc)",
+        "name": "Cherry MX2A Black Clear Top RGB | Pre-lube",
         "price": 528000,
         "image": "nah.jpg"
     },
     {
-        "name": "Cherry MX2A Ergo Clear RGB | Pre-lube (35pc)",
+        "name": "Cherry MX2A Ergo Clear RGB | Pre-lube",
         "price": 528000,
         "image": "nah.jpg"
     },
     {
-        "name": "Cherry MX2A Red RGB | Pre-lube (35pc)",
+        "name": "Cherry MX2A Red RGB | Pre-lube",
         "price": 352000,
         "image": "nah.jpg"
     },
     {
-        "name": "Cherry MX2A Silent Red RGB | Pre-lube (35pc)",
+        "name": "Cherry MX2A Silent Red RGB | Pre-lube",
         "price": 440000,
         "image": "nah.jpg"
     },
     {
-        "name": "Cherry MX2A Brown RGB | Pre-lube (35pc)",
+        "name": "Cherry MX2A Brown RGB | Pre-lube",
         "price": 352000,
         "image": "nah.jpg"
     },
     {
-        "name": "Cherry MX2A Silver RGB | Pre-lube (35pc)",
+        "name": "Cherry MX2A Silver RGB | Pre-lube",
         "price": 440000,
         "image": "nah.jpg"
     },
     {
-        "name": "Cherry MX2A Blue RGB | Pre-lube (35pc)",
+        "name": "Cherry MX2A Blue RGB | Pre-lube",
         "price": 352000,
         "image": "nah.jpg"
     },
     {
-        "name": "Cherry MX2A Speed Silver RGB | Pre-lube (35pc)",
+        "name": "Cherry MX2A Speed Silver RGB | Pre-lube",
         "price": 440000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Cherry MX2A Clear RGB | Pre-lube",
+        "price": 352000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Cherry MX2A Green RGB | Pre-lube",
+        "price": 352000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Cherry MX2A Silent Black RGB | Pre-lube",
+        "price": 440000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Cherry MX2A Silent Clear RGB | Pre-lube",
+        "price": 440000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Cherry MX2A Silent Brown RGB | Pre-lube",
+        "price": 440000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Cherry MX2A Silent Speed Silver RGB | Pre-lube",
+        "price": 440000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Cherry MX2A Silent Red RGB | Pre-lube",
+        "price": 440000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Cherry MX2A Silent White RGB | Pre-lube",
+        "price": 440000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Cherry MX2A Silent Gray RGB | Pre-lube",
+        "price": 440000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Cherry MX2A Silent Pink RGB | Pre-lube",
+        "price": 440000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Cherry MX2A Silent Blue RGB | Pre-lube",
+        "price": 440000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Gateron G Pro 2.0 White",
+        "price": 560000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Gateron G Pro 2.0 Black",
+        "price": 560000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Gateron G Pro 2.0 Brown",
+        "price": 320000,
+        "image": "nah.jpg" 
+    },
+    {
+        "name": "Gateron G Pro 2.0 Red",
+        "price": 420000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Gateron G Pro White",
+        "price": 320000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Gateron G Pro Black",
+        "price": 320000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Gateron G Pro Brown",
+        "price": 320000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Gateron G Pro Red",
+        "price": 320000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Gateron G Pro Yellow",
+        "price": 320000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Gateron G Pro Green",
+        "price": 320000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Gateron G Pro Blue",
+        "price": 320000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Gateron G Pro Clear",
+        "price": 320000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Gateron G Pro Silent Black",
+        "price": 420000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Gateron G Pro Silent Brown",
+        "price": 420000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Gateron G Pro Silent Red",
+        "price": 420000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Gateron G Pro Silent Yellow",
+        "price": 420000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Gateron G Pro Silent Green",
+        "price": 420000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Gateron G Pro Silent Blue",
+        "price": 420000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Gateron G Pro Silent Clear",
+        "price": 420000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Gateron G Pro Silent Yellow",
+        "price": 420000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "kalih Box White",
+        "price": 320000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "kalih Box Black",
+        "price": 320000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "kalih Box Brown",
+        "price": 320000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "kalih Box Red",
+        "price": 320000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "kalih Box Yellow",
+        "price": 320000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "kalih Box Green",
+        "price": 320000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "kalih Box Blue",
+        "price": 320000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "kalih Box Clear",
+        "price": 320000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "kalih Box Pink",
+        "price": 320000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "kalih Box Navy",
+        "price": 320000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "kalih Box Jade",
+        "price": 320000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "kalih Box Royal",
+        "price": 320000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "kalih Box Burnt Orange",
+        "price": 320000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "kalih Box Pale Blue",
+        "price": 320000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "kalih Box Dark Yellow",
+        "price": 320000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "kalih Box Heavy Dark Yellow",
+        "price": 320000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "kalih Box Heavy Burnt Orange",
+        "price": 320000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Keychron K Pro Red",
+        "price": 480000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Keychron K Pro Blue",
+        "price": 480000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Keychron K Pro Brown",
+        "price": 480000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Cherry Profile Double Shot PBT Keycaps",
+        "price": 865000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Cherry Profile Double Shot ABS Keycaps",
+        "price": 865000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Cherry Profile Dye Sub PBT Keycaps",
+        "price": 865000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Cherry Profile Dye Sub ABS Keycaps",
+        "price": 865000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Cherry Profile Double Shot PBT Keycaps",
+        "price": 865000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Cherry Profile Double Shot ABS Keycaps",
+        "price": 865000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Cherry Profile Dye Sub PBT Keycaps",
+        "price": 865000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Cherry Profile Dye Sub ABS Keycaps",
+        "price": 865000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Cherry Profile Double Shot PBT Keycaps",
+        "price": 865000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Cherry Profile Double Shot ABS Keycaps",
+        "price": 865000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Cherry Profile Dye Sub PBT Keycaps",
+        "price": 865000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Cherry Profile Dye Sub ABS Keycaps",
+        "price": 865000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Cherry Profile Double Shot PBT Keycaps",
+        "price": 865000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Cherry Profile Double Shot ABS Keycaps",
+        "price": 865000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "Cherry Profile Dye Sub PBT Keycaps",
+        "price": 865000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "OEM Dye-Sub PBT Keycaps Ocean",
+        "price": 750000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "OEM Dye-Sub PBT Keycaps Unicorn",
+        "price": 760000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "OEM Dye-Sub PBT Keycaps Iceberg",
+        "price": 750000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "OEM Dye-Sub PBT Keycaps Sakura",
+        "price": 750000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "OEM Dye-Sub PBT Keycaps Forest",
+        "price": 750000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "OEM Dye-Sub PBT Keycaps Sunset",
+        "price": 750000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "OEM Dye-Sub PBT Keycaps Horizon",
+        "price": 750000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "OEM Dye-Sub PBT Keycaps Horizon",
+        "price": 750000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "OEM Dye-Sub PBT Keycaps Horizon",
+        "price": 750000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "OEM Dye-Sub PBT Keycaps Horizon",
+        "price": 750000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "OEM Dye-Sub PBT Keycaps Horizon",
+        "price": 750000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "OEM Dye-Sub PBT Keycaps Horizon",
+        "price": 750000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "OEM Dye-Sub PBT Keycaps Horizon",
+        "price": 750000,
+        "image": "nah.jpg"
+    },
+    {
+        "name": "OEM Dye-Sub PBT Keycaps Horizon",
+        "price": 750000,
         "image": "nah.jpg"
     }
 ]
