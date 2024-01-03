@@ -544,10 +544,15 @@ main {
   justify-content: center;
   align-items: center;
   display: flex;
+  padding-bottom: 50px;
+}
+
+.Column_container2 {
+  padding: 50px;
 }
 
 .email_form {
-  display: flex;;
+  display: flex;
 }
 
 .emailsignup {
@@ -602,6 +607,7 @@ main {
   cursor: pointer;
   border: none;
 }
+
 
 .row1 {
   display: flex;

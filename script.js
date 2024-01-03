@@ -6,13 +6,13 @@ updateCartDisplay();
 const loginButton = document.querySelector('.lgin_ic');
 const loginContainer = document.querySelector('.login_container');
 const searchIcon = document.querySelector('.search_ic');
-const searchBar = document.querySelector('.searchBar'); // Corrected this line
+const searchBar = document.querySelector('.searchBar');
 const btnLogin = document.querySelector('.btn_log');
 const registerLink = document.querySelector('.log_reg .log_link');
 const emailInput = document.querySelector('#email');
 const passwordInput = document.querySelector('#password');
-const cartIcon = document.querySelector('.cart_ic'); // Replace '.cart_ic' with the actual class or id of your cart icon
-const cartContainer = document.querySelector('.cart_Container'); // Replace '.cart_container' with the actual class or id of your cart container
+const cartIcon = document.querySelector('.cart_ic'); 
+const cartContainer = document.querySelector('.cart_Container');
 
 function toggleShow(target, ...elements) {
     elements.forEach(element => {
