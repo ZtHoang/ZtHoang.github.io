@@ -15,17 +15,17 @@
     <div class="Register_form">
       <h2 class="heading_reg">Create Account</h2>
       <p class="p_log">Register to get started.</p>
-      <form action="/submit_registration" method="post" class="Reg_form">
+      <form action="reg.php" method="post" class="Reg_form">
         <div class="reg_gr">
-          <label class="txt_inp" for="fname">First Name:</label>
-          <input type="text" id="fname" name="fname" class="log_plc" required/>
+          <label class="txt_inp" for="fullname">Enter your Name:</label>
+          <input type="text" id="fullname" name="fullname" class="log_plc" required/>
         </div>
         <div class="reg_gr">
-          <label class="txt_inp" for="lname">Last Name:</label>
-          <input type="text" id="lname" name="lname" class="log_plc" required/>
+          <label class="txt_inp" for="lname">Enter your user Name</label>
+          <input type="text" id="u_name" name="u_name" class="log_plc" required/>
         </div>
         <div class="reg_gr">
-          <label class="txt_inp" for="email">Email:</label>
+          <label class="txt_inp" for="email">Enter your Email:</label>
           <input type="email" id="email" name="email" class="log_plc" required/>
         </div>
         <div class="reg_gr">
@@ -36,7 +36,7 @@
         <div class="reg_gr">
           <input type="checkbox" id="agree" name="agree" value="agree" required/>
           <label for="agree">I agree to the <a href="#">Terms and Conditions</a></label>
-        <input type="submit" value="Submit" class="btn_log"/>
+          <input type="submit" value="Submit" class="btn_reg" name="btn_reg"/>
       </form>
     </div>
   </body>
