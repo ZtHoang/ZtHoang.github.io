@@ -2,11 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Keybolic</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=d, initial-scale=1.0" />
+    <title>Payment</title>
+    <link rel="stylesheet" href="style1.css" />
   </head>
-
   <body>
     <header>
       <div class="nav_container">
@@ -75,7 +74,7 @@
 
           <div class="log_reg">
             <p class="log_text">Don't have an account?</p>
-            <a class="log_link" target="_blank" href="Kbl_Register.html"
+            <a class="log_link" target="_blank" href="Kbl_Register.php"
               >Register</a
             >
           </div>
@@ -101,92 +100,19 @@
     </header>
 
     <main>
-      <!-- Hero section -->
-      <div class="Home_hero">
-        <div class="column_container">
-          <div class="hero_container">
-            <div class="row">
-              <div class="left_content">
-                <h1 class="SuperHeading">
-                  <h1 class="SuperHeading-txt">Get a custom keyboard</h1>
-                  <p class="moreContent">
-                    <br />
-                    Search it - Buy it - Enjoy
-                    <br /><br />
-                    All the things you want, the feeling of comfort, silence, or
-                    a clicky experience—it's all your choice.
-                  </p>
-                </h1>
-              </div>
-              <div class="middle_content"></div>
-              <div class="right_content">
-                <div class="nav_box">
-                  <a href="#Topsell">
-                    <span class="nav_link">
-                      <i class="fa-solid fa-fire"></i>
-                    </span>
-                    Top-selling product
-                  </a>
-                  <a href="#Accesories">
-                    <span class="nav_link">
-                      <i class="fa-solid fa-keyboard"></i>
-                    </span>
-                    Decor your keyboard
-                  </a>
-                  <a href="#Social">
-                    <span class="nav_link">
-                      <i class="fa-solid fa-address-card"></i>
-                    </span>
-                    Contact with us
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Create a space that list item for sale -->
-      <div id="Topsell">
-        <div class="Column_container">
-          <div class="row-title">
-            <h2>Top selling product</h2>
-          </div>
-          <div class="row1"></div>
-        </div>
-      </div>
-
-      <div class="Accesories" id="Accesories">
-        <div class="Column_container1">
-          <div class="row-title1">
-            <h2>Decor for your keyboard</h2>
-          </div>
-          <div class="row2"></div>
-        </div>
-      </div>
-
-      <!-- email and answer -->
-      <div class="Sale_noti" id="Social">
-        <div class="Column_container2">
-          <div class="row-title2">
-            <h2>stay up to date</h2>
-          </div>
-          <div class="answer">
-            Get the latest news and updates from Keybolic
-          </div>
-          <div class="email">
-            <div class="email_form">
-              <input
-                class="emailsignup"
-                type="text"
-                placeholder="Enter your email"
-              />
-              <button class="btn_email">Subscribe</button>
-            </div>
-          </div>
-        </div>
+      <div class="content">
+        <h1>Payment Page</h1>
+        <div id="cartItems"></div>
+        <h2 id="totalPrice"></h2>
+        <form id="paymentForm">
+          <label for="name">Name:</label><br />
+          <input type="text" id="name" name="name" /><br />
+          <label for="cardNumber">Card Number:</label><br />
+          <input type="text" id="cardNumber" name="cardNumber" /><br />
+          <input type="submit" value="Submit" />
+        </form>
       </div>
     </main>
-
     <!-- For the icon -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script

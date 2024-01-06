@@ -359,4 +359,32 @@ function loadCart() {
 window.onload = function() {
     loadCart();
 };
+
+var cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+// Display cart items
+var cartItemsElement = document.getElementById('cartItems');
+cart.forEach(item => {
+    var itemElement = document.createElement('p');
+    itemElement.textContent = `${item.name} - ${item.quantity} - ${item.price}`;
+    cartItemsElement.appendChild(itemElement);
+});
+
+// Calculate and display total price
+var totalPriceElement = document.getElementById('totalPrice');
+var totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+totalPriceElement.textContent = `Total Price: ${totalPrice}`;
+
+// Handle form submission
+var paymentForm = document.getElementById('paymentForm');
+paymentForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Here you would typically send the payment details and the cart items to your server
+    console.log('Form submitted');
+
+    // Clear the cart
+    cart = [];
+    localStorage.setItem('cart', JSON.stringify(cart));
+});
 //---------------------------------------------------------------------------------------------
