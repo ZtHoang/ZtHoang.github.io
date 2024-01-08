@@ -884,6 +884,65 @@ main {
   background-color: transparent;
 }
 
+.card_item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+  background-color:#e6e6e6;
+}
+
+.image_card {
+  position: relative;
+  order: -1;
+  width: 75px;
+  height: 75px;
+  overflow: hidden;
+}
+
+.image_card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.item_info {
+  flex:1;
+  margin-left: 10px;
+}
+
+.item_name {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.item_price {
+  color: var(--text-secondary);
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.item_quantity {
+  display: flex;
+  justify-content: space-between;
+  width: 60px;
+}
+
+.item_quantity .minus,
+.item_quantity .plus {
+  cursor: pointer;
+  color: var(--text-secondary);
+  border-radius: 100%;
+  padding: 2px 5px;
+  font-size: 10px;
+  text-decoration: none;
+  margin-bottom: 5px;
+  border: none;
+}
+
 .cart_ic:hover i {
   color: var(--text-secondary);
 }

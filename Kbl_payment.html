@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=d, initial-scale=1.0" />
     <title>Payment</title>
-    <link rel="stylesheet" href="style1.css" />
+    <link rel="stylesheet" href="style_cart.css" />
   </head>
   <body>
     <header>
@@ -101,16 +101,38 @@
 
     <main>
       <div class="content">
-        <h1>Payment Page</h1>
-        <div id="cartItems"></div>
-        <h2 id="totalPrice"></h2>
-        <form id="paymentForm">
-          <label for="name">Name:</label><br />
-          <input type="text" id="name" name="name" /><br />
-          <label for="cardNumber">Card Number:</label><br />
-          <input type="text" id="cardNumber" name="cardNumber" /><br />
-          <input type="submit" value="Submit" />
-        </form>
+        <div class="left_ct">
+          <h1>Payment Page</h1>
+          <div id="cartItems"></div>
+          <h2 id="totalPrice"></h2>
+        </div>
+        <div class="middle_ct">
+          <h1>Payment Method</h1>
+          <div class="payment_method">
+            <div class="payment_method_item">
+              <input type="radio" id="paypal" name="payment" value="paypal" />
+              <label for="paypal">Paypal</label>
+            </div>
+            <div class="payment_method_item">
+              <input type="radio" id="creditCard" name="payment" value="creditCard" />
+              <label for="creditCard">Credit Card</label>
+            </div>
+          </div>
+        </div>
+        <div class="right_ct">
+          <h1>Shipping Address</h1>
+          <div class="shipping_address">
+            <div class="shipping_address_item">
+              <input type="radio" id="default" name="shipping" value="default"/>
+              <label for="default">Default</label>
+            </div>
+            <div class="shipping_address_item">
+              <input type="radio" id="newAddress" name="shipping" value="newAddress"
+              />
+              <label for="newAddress">New Address</label>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
     <!-- For the icon -->

@@ -214,22 +214,28 @@ var loggedInUser = null;
 
 // Function to add a product to the cart
 function addToCart(product, price, imgSrc) {
-    // Retrieve user from localStorage
-    let user = JSON.parse(localStorage.getItem(loggedInUser));
+    // Retrieve cart from localStorage
+    cart = loggedInUser ? JSON.parse(localStorage.getItem(loggedInUser)).cart : JSON.parse(localStorage.getItem('cart')) || [];
 
-    var existingProduct = user.cart.find(item => item.name === product);
+    var existingProduct = cart.find(item => item.name === product);
 
     if (existingProduct) {
         existingProduct.quantity += 1;
     } else {
-        user.cart.push({ name: product, price: price, img: imgSrc, quantity: 1 });
+        cart.push({ name: product, price: price, img: imgSrc, quantity: 1 });
     }
 
     // Store updated user object in localStorage
-    localStorage.setItem(loggedInUser, JSON.stringify(user));
+    if (loggedInUser) {
+        let user = JSON.parse(localStorage.getItem(loggedInUser));
+        user.cart = cart;
+        localStorage.setItem(loggedInUser, JSON.stringify(user));
+    } else {
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
 
-    updateCartDisplay();
     updateCartCount();
+    updateCartDisplay();
 }
 
 
@@ -270,7 +276,7 @@ function createItemQuantityEventListener(item, itemQuantity) {
             quantity.innerText = ' ' + existingProduct.quantity + ' ';
         }
     });
-} 
+}
 
 // Function to display the cart
 function updateCartDisplay() {
@@ -376,15 +382,54 @@ var cart = JSON.parse(localStorage.getItem('cart')) || [];
 // Display cart items
 var cartItemsElement = document.getElementById('cartItems');
 cart.forEach(item => {
-    var itemElement = document.createElement('p');
-    itemElement.textContent = `${item.name} - ${item.quantity} - ${item.price}`;
-    cartItemsElement.appendChild(itemElement);
+    var cardItem = document.createElement('div');
+    cardItem.className = 'card_item';
+
+    var imageCard = document.createElement('div');
+    imageCard.className = 'image_card';
+
+    var img = document.createElement('img');
+    img.src = item.img;
+    imageCard.appendChild(img);
+
+    var itemInfo = document.createElement('div');
+    itemInfo.className = 'item_info';
+
+    var itemName = document.createElement('div');
+    itemName.className = 'item_name';
+    itemName.innerHTML = item.name;
+    itemInfo.appendChild(itemName);
+
+    var itemPrice = document.createElement('div');
+    itemPrice.className = 'item_price';
+    itemPrice.innerHTML = item.price.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+    itemInfo.appendChild(itemPrice);
+
+    var itemQuantity = document.createElement('div');
+    itemQuantity.className = 'item_quantity';
+
+    var quantity = document.createElement('span');
+    quantity.innerText = 'Quantity: ' + item.quantity;
+    itemQuantity.appendChild(quantity);
+
+    itemInfo.appendChild(itemQuantity); 
+    cardItem.appendChild(imageCard);
+    cardItem.appendChild(itemInfo);
+    cartItemsElement.appendChild(cardItem);
+
+    if (item !== cart[cart.length - 1]) {
+        var line = document.createElement('hr');
+        cartItemsElement.appendChild(line);
+    }
 });
+var totalPriceElement = document.querySelector('#total_price');
+var totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+totalPriceElement.innerText = totalPrice.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
 
 // Calculate and display total price
 var totalPriceElement = document.getElementById('totalPrice');
 var totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
-totalPriceElement.textContent = `Total Price: ${totalPrice}`;
+totalPriceElement.textContent = `Total Price: ${totalPrice.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })}`;
 
 // Handle form submission
 var paymentForm = document.getElementById('paymentForm');
@@ -398,7 +443,7 @@ paymentForm.addEventListener('submit', function(event) {
     cart = [];
     localStorage.setItem('cart', JSON.stringify(cart));
 });
-
+                                                                                                                                                                
 function register(event) {
     event.preventDefault();
   
@@ -461,3 +506,17 @@ function login(event) {
     }
 }
 //---------------------------------------------------------------------------------------------
+
+function goToPaymentSite() {
+    // Convert the cart to a JSON string
+    let cartJson = JSON.stringify(cart);
+
+    // Encode the JSON string to safely pass it as a URL parameter
+    let encodedCart = encodeURIComponent(cartJson);
+
+    // The URL of the payment site
+    let paymentSiteUrl = "Kbl_payment.html";
+
+    // Redirect to the payment site with the cart data as a URL parameter
+    window.location.href = paymentSiteUrl + "?cart=" + encodedCart;
+}
