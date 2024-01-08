@@ -15,13 +15,13 @@
     <div class="Register_form">
       <h2 class="heading_reg">Create Account</h2>
       <p class="p_log">Register to get started.</p>
-      <form action="index.html" method="post" class="Reg_form">
+      <form onsubmit="register(event);" class="Reg_form">
         <div class="reg_gr">
           <label class="txt_inp" for="fullname">Enter your Name:</label>
           <input type="text" id="fullname" name="fullname" class="log_plc" required/>
         </div>
         <div class="reg_gr">
-          <label class="txt_inp" for="lname">Enter your user Name</label>
+          <label class="txt_inp" for="usernam">Enter your Username</label>
           <input type="text" id="u_name" name="u_name" class="log_plc" required/>
         </div>
         <div class="reg_gr">
@@ -39,5 +39,6 @@
           <input type="submit" value="Submit" class="btn_reg" name="btn_reg"/>
       </form>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>

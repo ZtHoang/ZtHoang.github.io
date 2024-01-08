@@ -51,6 +51,7 @@ registerLink.addEventListener('click', (event) => {
     window.location.href = registerLink.href;
 });
 
+
 //---------------------------------------------------------------------------------------------
 
 var dropdownContent = document.createElement('div');
@@ -81,50 +82,51 @@ window.addEventListener('load', function() {
                 let randomIndex = Math.floor(Math.random() * products.length);
                 let product = products[randomIndex];
 
-                var column = document.createElement('div');
-                column.className = 'column';
+                (function(product) {
+                    var column = document.createElement('div');
+                    column.className = 'column';
 
-                var card = document.createElement('div');
-                card.className = 'card';
+                    var card = document.createElement('div');
+                    card.className = 'card';
 
-                var img = document.createElement('img');
-                img.src = product.img;
+                    var img = document.createElement('img');
+                    img.src = product.img;
 
-                var description = document.createElement('div');
-                description.className = 'description';
+                    var description = document.createElement('div');
+                    description.className = 'description';
 
-                var prod_Name = document.createElement('div');
-                prod_Name.className = 'prod_Name';
-                prod_Name.innerHTML = '<strong>' + product.name + '<strong>';
+                    var prod_Name = document.createElement('div');
+                    prod_Name.className = 'prod_Name';
+                    prod_Name.innerHTML = '<strong>' + product.name + '<strong>';
 
-                var prod_Price = document.createElement('div');
-                prod_Price.className = 'prod_Price';
-                prod_Price.innerText = parseInt(product.price).toLocaleString('de-DE') + "₫";
+                    var prod_Price = document.createElement('div');
+                    prod_Price.className = 'prod_Price';
+                    prod_Price.innerText = parseInt(product.price).toLocaleString('de-DE') + "₫";
 
-                
-                var addToCartButton = document.createElement('a');
-                addToCartButton.className = 'addToCart';
-                addToCartButton.addEventListener('click', function() {
-                    addToCart(product.name, product.price, product.img);
-                });
+                    var addToCartButton = document.createElement('a');
+                    addToCartButton.className = 'addToCart';
+                    addToCartButton.addEventListener('click', function() {
+                        addToCart(product.name, product.price, product.img);
+                    });
 
-                var icon = document.createElement('i');
-                icon.className = 'fa-solid fa-cart-shopping';
+                    var icon = document.createElement('i');
+                    icon.className = 'fa-solid fa-cart-shopping';
 
-                // Append the icon to the addToCart element
-                addToCartButton.appendChild(icon);
+                    // Append the icon to the addToCart element
+                    addToCartButton.appendChild(icon);
 
-                // Create a text node and append it after the icon
-                var textNode = document.createTextNode(' Add to Cart');
-                addToCartButton.appendChild(textNode);
+                    // Create a text node and append it after the icon
+                    var textNode = document.createTextNode(' Add to Cart');
+                    addToCartButton.appendChild(textNode);
 
-                description.appendChild(prod_Name);
-                description.appendChild(prod_Price);
-                description.appendChild(addToCartButton);
-                card.appendChild(img);
-                card.appendChild(description);
-                column.appendChild(card);
-                container.appendChild(column);
+                    description.appendChild(prod_Name);
+                    description.appendChild(prod_Price);
+                    description.appendChild(addToCartButton);
+                    card.appendChild(img);
+                    card.appendChild(description);
+                    column.appendChild(card);
+                    container.appendChild(column);
+                })(product);
 
                 products.splice(randomIndex, 1);
             }
@@ -143,55 +145,57 @@ window.addEventListener('load', function() {
                 let randomIndex = Math.floor(Math.random() * accessories.length);
                 let accessory = accessories[randomIndex];
 
-                var column = document.createElement('div');
-                column.className = 'column1';
+                (function(accessory) {
+                    var column = document.createElement('div');
+                    column.className = 'column1';
 
-                var card = document.createElement('div');
-                card.className = 'card1';
+                    var card = document.createElement('div');
+                    card.className = 'card1';
 
-                var img = document.createElement('img');
-                img.src = accessory.img;
+                    var img = document.createElement('img');
+                    img.src = accessory.img;
 
-                var description = document.createElement('div');
-                description.className = 'description1';
+                    var description = document.createElement('div');
+                    description.className = 'description1';
 
-                var prod_Name = document.createElement('div');
-                prod_Name.className = 'prod_Name1';
-                prod_Name.innerHTML = '<strong>' + accessory.name + '<strong>';
+                    var prod_Name = document.createElement('div');
+                    prod_Name.className = 'prod_Name1';
+                    prod_Name.innerHTML = '<strong>' + accessory.name + '<strong>';
 
-                var prod_Price = document.createElement('div');
-                prod_Price.className = 'prod_Price1';
-                prod_Price.innerText = parseInt(accessory.price).toLocaleString('de-DE') + "₫";
+                    var prod_Price = document.createElement('div');
+                    prod_Price.className = 'prod_Price1';
+                    prod_Price.innerText = parseInt(accessory.price).toLocaleString('de-DE') + "₫";
 
-                var addToCartButton = document.createElement('a');
-                addToCartButton.className = 'addToCart1';
-                addToCartButton.addEventListener('click', function() {
-                    addToCart(accessory.name, accessory.price, accessory.img);
-                });
+                    var addToCartButton = document.createElement('a');
+                    addToCartButton.className = 'addToCart1';
+                    addToCartButton.addEventListener('click', function() {
+                        addToCart(accessory.name, accessory.price, accessory.img);
+                    });
 
-                var icon = document.createElement('i');
-                icon.className = 'fa-solid fa-cart-shopping1';
+                    var icon = document.createElement('i');
+                    icon.className = 'fa-solid fa-cart-shopping1';
 
-                // Append the icon to the addToCart element
-                addToCartButton.appendChild(icon);
+                    // Append the icon to the addToCart element
+                    addToCartButton.appendChild(icon);
 
-                // Create a text node and append it after the icon
-                var textNode = document.createTextNode(' Add to Cart');
-                addToCartButton.appendChild(textNode);
+                    // Create a text node and append it after the icon
+                    var textNode = document.createTextNode(' Add to Cart');
+                    addToCartButton.appendChild(textNode);
 
-                description.appendChild(prod_Name);
-                description.appendChild(prod_Price);
-                description.appendChild(addToCartButton);
-                card.appendChild(img);
-                card.appendChild(description);
-                column.appendChild(card);
-                container.appendChild(column);
+                    description.appendChild(prod_Name);
+                    description.appendChild(prod_Price);
+                    description.appendChild(addToCartButton);
+                    card.appendChild(img);
+                    card.appendChild(description);
+                    column.appendChild(card);
+                    container.appendChild(column);
+                })(accessory);
 
                 accessories.splice(randomIndex, 1);
             }
-        });
+        })
+        .catch(error => console.error('Error:', error)); // Add this line
 });
-
 //---------------------------------------------------------------------------------------------
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -206,27 +210,28 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 //---------------------------------------------------------------------------------------------
 
 var cart = [];
+var loggedInUser = null;
 
 // Function to add a product to the cart
 function addToCart(product, price, imgSrc) {
-    var existingProduct = cart.find(item => item.name === product);
+    // Retrieve user from localStorage
+    let user = JSON.parse(localStorage.getItem(loggedInUser));
+
+    var existingProduct = user.cart.find(item => item.name === product);
 
     if (existingProduct) {
         existingProduct.quantity += 1;
     } else {
-        cart.push({ name: product, price: price, img: imgSrc, quantity: 1 });
+        user.cart.push({ name: product, price: price, img: imgSrc, quantity: 1 });
     }
 
-    saveCart();
+    // Store updated user object in localStorage
+    localStorage.setItem(loggedInUser, JSON.stringify(user));
+
     updateCartDisplay();
     updateCartCount();
 }
 
-document.querySelectorAll('.minus, .plus').forEach(element => {
-    element.addEventListener('mousedown', function(event) {
-        event.preventDefault();
-    });
-});
 
 function updateQuantity(product, delta) {
     var existingProduct = cart.find(item => item.name === product);
@@ -245,21 +250,27 @@ function updateQuantity(product, delta) {
 }
 
 function createItemQuantityEventListener(item, itemQuantity) {
-    itemQuantity.addEventListener('click', function(event) {
-        if (event.target.className === 'minus' || event.target.className === 'plus') {
-            var existingProduct = cart.find(cartItem => cartItem.name === item.name);
-            if (existingProduct) {
-                if (event.target.className === 'minus') {
-                    updateQuantity(existingProduct.name, -1);
-                } else if (event.target.className === 'plus') {
-                    updateQuantity(existingProduct.name, 1);
-                }
-                // Update the displayed quantity
-                quantity.innerText = ' ' + existingProduct.quantity + ' ';
-            }
+    var minusButton = itemQuantity.querySelector('.minus');
+    var plusButton = itemQuantity.querySelector('.plus');
+
+    minusButton.addEventListener('click', function(event) {
+        var existingProduct = cart.find(cartItem => cartItem.name === item.name);
+        if (existingProduct) {
+            updateQuantity(existingProduct.name, -1);
+            // Update the displayed quantity
+            quantity.innerText = ' ' + existingProduct.quantity + ' ';
         }
     });
-}
+
+    plusButton.addEventListener('click', function(event) {
+        var existingProduct = cart.find(cartItem => cartItem.name === item.name);
+        if (existingProduct) {
+            updateQuantity(existingProduct.name, 1);
+            // Update the displayed quantity
+            quantity.innerText = ' ' + existingProduct.quantity + ' ';
+        }
+    });
+} 
 
 // Function to display the cart
 function updateCartDisplay() {
@@ -387,4 +398,66 @@ paymentForm.addEventListener('submit', function(event) {
     cart = [];
     localStorage.setItem('cart', JSON.stringify(cart));
 });
+
+function register(event) {
+    event.preventDefault();
+  
+    // Get form values
+    let fullname = document.getElementById('fullname').value;
+    let username = document.getElementById('u_name').value;
+    let email = document.getElementById('email').value;
+    let password = document.getElementById('pwd').value;
+  
+    // Create user object
+    let user = {
+      fullname: fullname,
+      username: username,
+      email: email,
+      password: password,
+      cart: []
+    };
+  
+    // Retrieve all users from localStorage
+    let users = JSON.parse(localStorage.getItem('account')) || {};
+  
+    // Add new user to users object
+    users[username] = user;
+  
+    // Store users object in localStorage
+    localStorage.setItem('account', JSON.stringify(users));
+  
+    // Redirect to another page after successful registration
+    window.location.href = 'reg.html';
+}
+
+function login(event) {
+    event.preventDefault();
+  
+    // Get form values
+    let usernameOrEmail = document.getElementById('email').value;
+    let password = document.getElementById('password').value;
+  
+    // Retrieve all users from localStorage
+    let users = JSON.parse(localStorage.getItem('account')) || {};
+    let user = null;
+  
+    // Loop through all users to find a match
+    for(let username in users) {
+      let currentUser = users[username];
+      if(currentUser.username === usernameOrEmail || currentUser.email === usernameOrEmail) {
+        user = currentUser;
+        break;
+      }
+    }
+  
+    // Check if user exists and password is correct
+    if (user && user.password === password) {
+      // Login successful, set loggedInUser and redirect to main page
+      localStorage.setItem('loggedInUser', user.username);
+      window.location.href = 'main.html';
+    } else {
+      // Login failed, show error message
+      alert('Invalid username/email or password');
+    }
+}
 //---------------------------------------------------------------------------------------------

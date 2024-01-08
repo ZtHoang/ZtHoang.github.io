@@ -5,6 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Keybolic</title>
     <link rel="stylesheet" href="style.css" />
+    <script>
+      console.log('Script started');
+      
+      function updateGreeting(username) {
+          console.log(`updateGreeting called with username: ${username}`);
+          
+          // Select the greeting element
+          let greetingElement = document.getElementById('usernameGreeting');
+          console.log('greetingElement:', greetingElement);
+      
+          // Update the text content of the greeting element
+          greetingElement.textContent = `Welcome back, ${username}!`;
+      }
+      
+      document.addEventListener('DOMContentLoaded', function() {
+          console.log('DOMContentLoaded event fired');
+          
+          let loggedInUser = localStorage.getItem('loggedInUser');
+          console.log('loggedInUser:', loggedInUser);
+          
+          if (loggedInUser) {
+              updateGreeting(loggedInUser);
+          }
+      });
+      </script>
   </head>
 
   <body>
@@ -57,27 +82,9 @@
         </div>
       </div>
       <!-- Login Form -->
-      <div class="login_container" id="loginForm">
-        <h2 class="heading_log">Welcome back!</h2>
-        <p class="p_log">Login to get started.</p>
-        <form>
-          <div class="log_gr">
-            <label class="txt_inp" for="email">Email</label>
-            <input type="email" id="email" class="log_plc" required />
-          </div>
-
-          <div class="log_gr">
-            <label class="txt_inp" for="password">Password</label>
-            <input type="password" id="password" class="log_plc" required />
-          </div>
-
-          <button class="btn_log" type="button" onclick="login(event)">Login</button>
-
-          <div class="log_reg">
-            <p class="log_text">Don't have an account?</p>
-            <a class="log_link" target="_blank" href="Kbl_Register.html">Register</a>
-          </div>
-        </form>
+      <div class="login_container" id="greetingMessage">
+        <h2 class="heading_log" id="usernameGreeting">Welcome back, [username]!</h2>
+        <p class="p_log">You are now logged in.</p>
       </div>
       <!-- Search Bar -->
       <div class="searchBar">
